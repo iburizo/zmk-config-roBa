@@ -41,11 +41,6 @@
             key-positions = <8 9>;
         };
 
-        MB3 {
-            bindings = <&mkp MB3>;
-            key-positions = <31 32>;
-        };
-
         colon {
             bindings = <&kp SEMICOLON>;
             key-positions = <20 21>;
