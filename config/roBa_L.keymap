@@ -134,13 +134,6 @@
             bindings = <&kp LANG2 &kp I &kp B &kp U &kp K &kp A &kp DOT &kp R &kp Y &kp O &kp M &kp A &kp AT &kp N &kp T &kp T &kp C &kp O &kp M &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "NTTCOMCOJP";
         };
-
-        tana12: tnbt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp A &kp N &kp A &kp B &kp O &kp T &kp A &kp N1 &kp N2>;
-            label = "TNBT";
-        };
     };
 
     behaviors {
