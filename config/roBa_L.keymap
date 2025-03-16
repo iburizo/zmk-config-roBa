@@ -210,6 +210,8 @@
 &trans    &trans    &trans      &trans  &trans  &trans      &trans  &kp AMPS       &kp BSPC  &kp LC(A)  &kp DEL    &trans
 &trans    &trans    &trans      &trans  &trans  &trans      &trans  &trans                                         &trans
             >;
+
+            sensor-bindings = <&rotate_kp LS(TAB) TAB>;
         };
 
         SCROLL {
@@ -220,7 +222,7 @@
 &trans        &trans         &trans        &trans  &trans  &trans      &trans  &kp LC(W)                                              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&rotate_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         WINDOW {
