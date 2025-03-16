@@ -26,7 +26,7 @@
         };
 
         double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp SQT>;
             key-positions = <33 32>;
         };
 
@@ -111,7 +111,7 @@
         employee_num: employee_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N6 &kp N6 &kp N9 &kp N6 &kp N8 &kp N4 &kp N1>;
+            bindings = <&kp LANG2 &kp N6 &kp N6 &kp N9 &kp N6 &kp N8 &kp N4 &kp N1>;
             label = "EMPLOYEE_NUM";
         };
 
@@ -125,7 +125,7 @@
         nttcomcojp: nttcomcojp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp I &kp B &kp U &kp K &kp A &kp DOT &kp R &kp Y &kp O &kp M &kp A &kp AT &kp N &kp T &kp T &kp C &kp O &kp M &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            bindings = <&kp LANG2 &kp I &kp B &kp U &kp K &kp A &kp DOT &kp R &kp Y &kp O &kp M &kp A &kp AT &kp N &kp T &kp T &kp C &kp O &kp M &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
             label = "NTTCOMCOJP";
         };
     };
@@ -172,7 +172,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 2 ENTER                             &sl 5
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         NUM {
@@ -210,7 +210,7 @@
             bindings = <
 &trans  &trans            &trans  &trans             &trans                      &trans  &trans        &kp LG(UP)    &trans         &trans
 &trans  &kp LG(LS(LEFT))  &trans  &kp LG(LS(RIGHT))  &trans  &trans      &trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &trans
-&trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans  &trans        &kp COMMA     &kp PERIOD     &trans
+&trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans  &trans        &kp COMMA     &kp PERIOD     &kp LS(QUESTION)
 &trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans                                             &trans
             >;
         };
