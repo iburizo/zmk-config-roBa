@@ -54,6 +54,36 @@
             bindings = <&mkp MB3>;
             key-positions = <31 32>;
         };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <11 12>;
+        };
+
+        paste {
+            bindings = <&kp LC(P)>;
+            key-positions = <20 19>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+
+        f7 {
+            bindings = <&kp F7>;
+            key-positions = <6 7>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <1 2>;
+        };
+
+        back {
+            bindings = <&mkp MB4>;
+            key-positions = <41 18>;
+        };
     };
 
     macros {
