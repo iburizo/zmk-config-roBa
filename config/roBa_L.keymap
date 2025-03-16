@@ -88,8 +88,15 @@
         Tnbt: Tnbt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(T) &kp A &kp N &kp A &kp B &kp O &kp T &kp A>;
+            bindings = <&kp LS(T) &kp A &kp N &kp A &kp B &kp O &kp T &kp A>;
             label = "TNBT";
+        };
+
+        nttcomcojp: nttcomcojp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp B &kp U &kp K &kp A &kp DOT &kp R &kp Y &kp O &kp M &kp A &kp AT &kp N &kp T &kp T &kp C &kp O &kp M &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            label = "NTTCOMCOJP";
         };
     };
 
@@ -160,10 +167,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans     &trans           &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans           &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(W)                                              &trans
+&kp LS(EXCL)  &trans         &trans        &trans  &trans                      &trans     &trans           &trans  &trans             &trans
+&kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &trans  &trans  &trans      &trans  &trans     &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans
+&trans        &trans         &trans        &trans  &trans  &trans      &trans  &trans     &trans           &trans  &trans             &trans
+&trans        &trans         &trans        &trans  &trans  &trans      &trans  &kp LC(W)                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -180,10 +187,10 @@
 
         SONOTA {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &employee_num  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans         &bt BT_CLR
+&trans  &trans        &trans        &trans        &Tnbt   &trans      &trans       &trans                                                   &bt BT_CLR_ALL
             >;
         };
     };
