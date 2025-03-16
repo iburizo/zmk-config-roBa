@@ -61,7 +61,7 @@
         };
 
         paste {
-            bindings = <&kp LC(P)>;
+            bindings = <&kp LC(V)>;
             key-positions = <20 19>;
         };
 
@@ -141,10 +141,30 @@
         };
 
         // ロータリーエンコーダにスクロールを追加するためのbehavior
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        up_down: up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        mouseSCRtest: mouseSCRtest {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "MOUSESCRTEST";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
     };
@@ -155,12 +175,12 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R            &kp T                                                            &kp Y        &kp U  &kp I     &kp O     &kp MINUS
-&kp A             &kp S         &lt 4 D       &lt 1 F          &kp G                 &kp LS(LG(S))               &kp MINUS      &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&kp A             &kp S         &lt 4 D       &lt 1 F          &kp G                 &mkp MB3                    &kp MINUS      &kp H        &kp J  &lt 3 K   &kp L     &kp P
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V            &mt LEFT_GUI B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 2 ENTER                             &sl 5
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&up_down>;
         };
 
         NUM {
@@ -179,7 +199,6 @@
 &trans    &trans    &trans      &trans  &trans  &trans      &trans  &kp AMPS       &kp BSPC  &kp LC(A)  &kp DEL    &trans
 &trans    &trans    &trans      &trans  &trans  &trans      &trans  &trans                                         &trans
             >;
-
         };
 
         SCROLL {
