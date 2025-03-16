@@ -141,6 +141,12 @@
         };
 
         // ロータリーエンコーダにスクロールを追加するためのbehavior
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -154,7 +160,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 2 ENTER                             &sl 5
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
