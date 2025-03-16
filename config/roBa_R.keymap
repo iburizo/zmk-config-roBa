@@ -6,7 +6,7 @@
     // scroll-layers = <SCROLL>;
     // snipe-layers = <3>;
     arrows {
-        layers = <SCROLL>;
+        layers = <3>;
         bindings =
             <&kp RIGHT_ARROW>,
             <&kp LEFT_ARROW>,
