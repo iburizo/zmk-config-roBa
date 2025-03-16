@@ -158,22 +158,22 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
-            tap-ms = <100>;
+            tap-ms = <300>;
         };
 
-        up2right: up2right {
+        up2left: up2left {
             compatible = "zmk,behavior-mod-morph";
-            label = "UP2RIGHT";
-            bindings = <&msc SCRL_UP>, <&msc SCRL_RIGHT>;
+            label = "UP2LEFT";
+            bindings = <&msc SCRL_UP>, <&msc SCRL_LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-        down2left: down2left {
+        down2right: down2right {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOWN2LEFT";
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_LEFT>;
+            label = "DOWN2RIGHT";
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_RIGHT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -240,6 +240,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &employee_num  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans         &bt BT_CLR
 &trans  &trans        &trans        &trans        &Tnbt   &trans      &trans       &trans                                                   &bt BT_CLR_ALL
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
