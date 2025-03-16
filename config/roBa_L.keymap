@@ -85,6 +85,11 @@
             bindings = <&mkp MB4>;
             key-positions = <41 18>;
         };
+
+        ctrl_w {
+            bindings = <&kp LC(W)>;
+            key-positions = <41 19>;
+        };
     };
 
     macros {
