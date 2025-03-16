@@ -54,6 +54,11 @@
             bindings = <&parentheses>;
             key-positions = <16 17>;
         };
+
+        middle_ckick {
+            bindings = <&mkp MB3>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
