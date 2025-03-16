@@ -135,7 +135,7 @@
             label = "NTTCOMCOJP";
         };
 
-        tnbt12: tnbt {
+        tana12: tnbt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp T &kp A &kp N &kp A &kp B &kp O &kp T &kp A &kp N1 &kp N2>;
@@ -248,7 +248,7 @@
 
         SONOTA {
             bindings = <
-&trans  &trans  &trans  &trans  &tnbt12                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &tana12                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans   &trans      &trans       &trans        &trans        &trans        &employee_num  &trans
 &trans  &trans  &trans  &trans  &trans   &trans      &bootloader  &trans        &trans        &trans        &trans         &bt BT_CLR
 &trans  &trans  &trans  &trans  &Tnbt    &trans      &trans       &trans                                                   &bt BT_CLR_ALL
