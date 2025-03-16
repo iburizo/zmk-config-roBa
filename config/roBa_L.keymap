@@ -126,7 +126,6 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
