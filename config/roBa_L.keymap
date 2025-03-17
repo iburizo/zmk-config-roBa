@@ -201,6 +201,8 @@
             label = "TD_LEFT_BRACKETS";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LBKT>, <&kp LESS_THAN>;
+
+            tapping-term-ms = <250>;
         };
 
         td_right_brackets: td_right_brackets {
@@ -209,7 +211,7 @@
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp GREATER_THAN>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
 
         td_nyoro: td_nyoro {
