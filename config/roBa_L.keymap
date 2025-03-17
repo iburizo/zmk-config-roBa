@@ -203,6 +203,15 @@
             label = "TD_RIGHT_BRACKETS";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp GREATER_THAN>;
+
+            tapping-term-ms = <300>;
+        };
+
+        td_nyoro: td_nyoro {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NYORO";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp TILDE>;
         };
     };
 
@@ -211,10 +220,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R            &kp T                                                             &kp Y        &kp U  &kp I     &kp O     &kp MINUS
-&kp A             &kp S         &lt 4 D       &lt 1 F          &kp G                 &kp LC(Z)               &kp GREATER_THAN    &kp H        &kp J  &lt 3 K   &kp L     &kp P
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V            &mt LEFT_GUI B        &td_left_brackets       &td_right_brackets  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp BACKSPACE       &lt 2 ENTER                             &sl 5
+&kp Q      &kp W         &kp E         &kp R            &kp T                                                             &kp Y        &kp U  &kp I     &kp O     &kp MINUS
+&kp A      &kp S         &lt 4 D       &lt 1 F          &kp G                 &kp LC(Z)               &kp GREATER_THAN    &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&kp Z      &kp X         &kp C         &kp V            &mt LEFT_GUI B        &td_left_brackets       &td_right_brackets  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_SHIFT      &lt 2 ENTER                             &sl 5
             >;
 
             sensor-bindings = <&rotate_scroll SCRL_DOWN SCRL_UP>;
@@ -254,8 +263,8 @@
         WINDOW {
             bindings = <
 &trans  &trans            &trans  &trans             &trans                      &trans  &trans        &kp LG(UP)    &trans         &trans
-&trans  &kp LG(LS(LEFT))  &trans  &kp LG(LS(RIGHT))  &trans  &trans      &trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &trans
-&trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans  &trans        &kp COMMA     &kp PERIOD     &kp LS(QUESTION)
+&trans  &kp LG(LS(LEFT))  &trans  &kp LG(LS(RIGHT))  &trans  &trans      &trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp PERCENT
+&trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans  &trans        &kp COMMA     &kp PERIOD     &kp QMARK
 &trans  &trans            &trans  &trans             &trans  &trans      &trans  &trans                                             &trans
             >;
         };
