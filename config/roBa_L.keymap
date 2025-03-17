@@ -90,6 +90,11 @@
             bindings = <&kp LC(W)>;
             key-positions = <41 19>;
         };
+
+        mission_control {
+            bindings = <&kp F3>;
+            key-positions = <19 40>;
+        };
     };
 
     macros {
