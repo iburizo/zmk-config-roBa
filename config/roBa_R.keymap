@@ -4,7 +4,7 @@
 &trackball {
     // automouse-layer = <MOUSE>;
     // scroll-layers = <SCROLL>;
-    // snipe-layers = <3>;
+    snipe-layers = <6>;
     arrows {
         layers = <3>;
         bindings =
