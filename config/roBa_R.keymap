@@ -3,8 +3,8 @@
 #include "boards/shields/Test/roBa_R.overlay"
 &trackball {
     // automouse-layer = <MOUSE>;
-    // scroll-layers = <SCROLL>;
-    snipe-layers = <6>;
+    scroll-layers = <4>;
+    snipe-layers = <5>;
     arrows {
         layers = <3>;
         bindings =
