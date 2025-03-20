@@ -8,6 +8,7 @@
 #define NUM 6
 
 // スクロール速度を設定
+
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
@@ -229,7 +230,8 @@
             bindings = <&lt 2 ENTER>, <&mt LEFT_SHIFT ENTER>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LGUI)>;
         };
     };
 
