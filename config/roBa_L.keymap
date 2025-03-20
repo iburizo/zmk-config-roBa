@@ -8,9 +8,7 @@
 #define NUM 6
 
 // スクロール速度を設定
-
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
 
 &mt {
     flavor = "balanced";
@@ -157,8 +155,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        // ロータリーエンコーダにスクロールを追加するためのbehavior
 
         rotate_scroll: rotate_scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
