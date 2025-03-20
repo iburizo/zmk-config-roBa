@@ -9,6 +9,7 @@
 
 // スクロール速度を設定
 // #define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 600
 
 &mt {
@@ -232,6 +233,33 @@
             mods = <(MOD_LCTL|MOD_LGUI)>;
             keep-mods = <(MOD_LCTL|MOD_LGUI)>;
         };
+
+        PGUP2LEFT: PGUP2LEFT {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP2LEFT";
+            bindings = <&kp PAGE_UP>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        PGDOWN2RIGHT: PGDOWN2RIGHT {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDOWN2RIGHT";
+            bindings = <&kp PAGE_DOWN>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        rotate_pgupdown: rotate_pgupdown {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ROTATE_PGUPDOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&PGUP2LEFT>, <&PGDOWN2RIGHT>;
+        };
     };
 
     keymap {
@@ -245,7 +273,7 @@
 &kp LS(LCTRL)  &kp LS(LEFT_WIN)  &kp LEFT_GUI  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_SHIFT      &mm_enter                             &sl 5
             >;
 
-            sensor-bindings = <&rotate_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&rotate_pgupdown>;
         };
 
         NUM {
