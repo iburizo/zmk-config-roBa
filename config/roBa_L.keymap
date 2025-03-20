@@ -8,7 +8,7 @@
 #define NUM 6
 
 // スクロール速度を設定
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 &mt {
     flavor = "balanced";
