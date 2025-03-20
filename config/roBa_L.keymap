@@ -270,7 +270,7 @@
 &kp Q  &kp W             &kp E         &kp R            &kp T                                                             &kp Y      &kp U  &kp I     &kp O     &td_nyoro
 &kp A  &kp S             &lt 4 D       &lt 1 F          &kp G                 &kp LCTRL               &kp GREATER_THAN    &kp H      &kp J  &lt 3 K   &kp L     &kp P
 &kp Z  &kp X             &kp C         &kp V            &kp B                 &td_left_brackets       &td_right_brackets  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&mo 5  &kp LS(LEFT_WIN)  &kp LEFT_GUI  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_SHIFT      &mm_enter                             &sl 5
+&mo 5  &kp LS(LEFT_WIN)  &kp LEFT_GUI  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LCTRL           &mm_enter                             &sl 5
             >;
 
             sensor-bindings = <&rotate_pgupdown>;
@@ -298,10 +298,10 @@
 
         SCROLL {
             bindings = <
-&kp LS(EXCL)  &trans         &trans        &trans  &trans                      &trans     &trans           &trans  &trans             &trans
-&kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &trans  &trans  &trans      &trans  &trans     &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans
-&trans        &trans         &trans        &trans  &trans  &trans      &trans  &trans     &trans           &trans  &trans             &trans
-&trans        &trans         &trans        &trans  &trans  &trans      &kp F3  &kp LC(W)                                              &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                      &trans     &trans           &trans  &trans             &trans
+&trans  &kp F4  &kp F5  &kp F6  &trans   &trans      &trans  &trans     &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans
+&trans  &kp F1  &kp F2  &kp F3  &trans   &trans      &trans  &trans     &trans           &trans  &trans             &trans
+&trans  &trans  &trans  &trans  &trans   &trans      &kp F3  &kp LC(W)                                              &trans
             >;
 
             sensor-bindings = <&rotate_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
