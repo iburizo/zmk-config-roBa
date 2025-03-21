@@ -269,7 +269,7 @@
             bindings = <
 &kp Q  &kp W             &kp E         &kp R            &kp T                                                             &kp Y      &kp U  &kp I     &kp O     &td_nyoro
 &kp A  &kp S             &lt 4 D       &lt 1 F          &kp G                 &kp LCTRL               &kp GREATER_THAN    &kp H      &kp J  &lt 3 K   &kp L     &kp P
-&kp Z  &kp X             &kp C         &kp V            &kp B                 &td_left_brackets       &td_right_brackets  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp Z  &kp X             &kp C         &kp V            &kp B                 &kp LC(Z)               &td_right_brackets  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
 &mo 5  &kp LS(LEFT_WIN)  &kp LEFT_GUI  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LCTRL           &mm_enter                             &sl 5
             >;
 
@@ -285,12 +285,12 @@
             >;
         };
 
-        ARROW {
+        ARROWandSYMBOL {
             bindings = <
-&kp EXCL  &trans    &trans      &trans  &trans                      &trans         &trans    &trans    &trans     &trans
-&kp AT    &kp HASH  &kp DOLLAR  &trans  &trans  &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &trans
-&trans    &trans    &trans      &trans  &trans  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans    &trans    &trans      &trans  &trans  &trans      &trans  &trans                                        &trans
+&kp EXCL  &trans    &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
+&kp AT    &kp HASH  &kp DOLLAR  &kp LBKT       &kp RBKT          &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &kp PERCENT
+&trans    &trans    &kp CARET   &kp LESS_THAN  &kp GREATER_THAN  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSLASH
+&trans    &trans    &trans      &trans         &trans            &trans      &trans  &trans                                        &trans
             >;
 
             sensor-bindings = <&rotate_kp LS(TAB) TAB>;
