@@ -224,16 +224,6 @@
             bindings = <&kp MINUS>, <&kp TILDE>;
         };
 
-        mm_enter: mm_enter {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_ENTER";
-            bindings = <&lt 2 ENTER>, <&mt LEFT_SHIFT ENTER>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LGUI)>;
-            keep-mods = <(MOD_LCTL|MOD_LGUI)>;
-        };
-
         PGUP2LEFT: PGUP2LEFT {
             compatible = "zmk,behavior-mod-morph";
             label = "PGUP2LEFT";
@@ -260,6 +250,20 @@
             #sensor-binding-cells = <0>;
             bindings = <&PGDOWN2RIGHT>, <&PGUP2LEFT>;
         };
+
+        td_ctrl: td_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CTRL";
+            #binding-cells = <0>;
+            bindings = <&mt LCTRL LANG2>, <&mt LS(LCTRL) MINUS>;
+        };
+
+        td_win: td_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WIN";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LS(LGUI)>;
+        };
     };
 
     keymap {
@@ -267,10 +271,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB         &kp W       &kp E         &kp R            &kp T                                                             &kp Y      &kp U  &kp I     &kp O     &td_nyoro
-&mt LEFT_SHIFT A  &kp S       &lt 4 D       &lt 1 F          &kp G                 &kp LCTRL               &kp GREATER_THAN    &kp H      &kp J  &lt 3 K   &kp L     &kp P
-&kp Z             &kp X       &kp C         &kp V            &kp B                 &mt LC(Y) LC(Z)         &td_right_brackets  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp COMMA         &kp PERIOD  &kp LEFT_GUI  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LCTRL           &mm_enter                             &sl 5
+&mt Q TAB  &kp W       &kp E    &kp R     &kp T                                                             &kp Y        &kp U  &kp I     &kp O     &td_nyoro
+&kp A      &kp S       &lt 4 D  &lt 1 F   &kp G                 &kp LCTRL               &kp GREATER_THAN    &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&kp Z      &kp X       &kp C    &kp V     &kp B                 &mt LC(Y) LC(Z)         &td_right_brackets  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp COMMA  &kp PERIOD  &td_win  &td_ctrl  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp MINUS           &lt 2 ENTER                             &sl 5
             >;
 
             sensor-bindings = <&rotate_pgupdown>;
