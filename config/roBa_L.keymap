@@ -41,16 +41,6 @@
             key-positions = <20 21>;
         };
 
-        linked_brackets {
-            bindings = <&linked_brackets>;
-            key-positions = <29 28>;
-        };
-
-        parentheses {
-            bindings = <&parentheses>;
-            key-positions = <16 17>;
-        };
-
         middle_ckick {
             bindings = <&mkp MB3>;
             key-positions = <31 32>;
@@ -69,11 +59,6 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
-        };
-
-        f7 {
-            bindings = <&kp F7>;
-            key-positions = <6 7>;
         };
 
         back {
@@ -99,6 +84,11 @@
         ctrl+z {
             bindings = <&kp LC(Z)>;
             key-positions = <37 10>;
+        };
+
+        ctrl-shift {
+            bindings = <&kp LS(LCTRL)>;
+            key-positions = <41 37>;
         };
     };
 
