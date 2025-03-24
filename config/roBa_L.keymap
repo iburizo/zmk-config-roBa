@@ -245,7 +245,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CTRL";
             #binding-cells = <0>;
-            bindings = <&mt LCTRL LANG2>, <&mt LS(LCTRL) MINUS>;
+            bindings = <&mt LCTRL LANG2>, <&kp LS(LCTRL)>;
         };
 
         td_win: td_win {
