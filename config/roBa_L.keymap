@@ -254,6 +254,16 @@
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp LS(LGUI)>;
         };
+
+        mm_z2shift: mm_z2shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_Z2SHIFT";
+            bindings = <&kp Z>, <&mt LEFT_SHIFT Z>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
+            keep-mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
+        };
     };
 
     keymap {
@@ -261,10 +271,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB         &kp W       &kp E    &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &td_nyoro
-&mt LEFT_SHIFT A  &kp S       &lt 4 D  &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
-&kp Z             &kp X       &kp C    &kp V            &kp B                 &mt LC(Y) LC(Z)         &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp COMMA         &kp PERIOD  &td_win  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LCTRL         &lt 2 ENTER                             &sl 5
+&mt Q TAB    &kp W       &kp E    &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &td_nyoro
+&kp A        &kp S       &lt 4 D  &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&mm_z2shift  &kp X       &kp C    &kp V            &kp B                 &mt LC(Y) LC(Z)         &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp COMMA    &kp PERIOD  &td_win  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LCTRL         &lt 2 ENTER                             &sl 5
             >;
 
             sensor-bindings = <&rotate_pgupdown>;
@@ -281,10 +291,10 @@
 
         ARROWandSYMBOL {
             bindings = <
-&kp EXCL           &trans    &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
-&mt LEFT_SHIFT AT  &kp HASH  &kp DOLLAR  &kp LBKT       &kp RBKT          &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &kp PERCENT
-&trans             &trans    &kp CARET   &kp LESS_THAN  &kp GREATER_THAN  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSLASH
-&trans             &trans    &trans      &trans         &trans            &trans      &trans  &trans                                        &trans
+&kp EXCL  &trans    &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
+&trans    &kp HASH  &kp DOLLAR  &kp LBKT       &kp RBKT          &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &kp PERCENT
+&trans    &trans    &kp CARET   &kp LESS_THAN  &kp GREATER_THAN  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSLASH
+&trans    &trans    &trans      &trans         &trans            &trans      &trans  &trans                                        &trans
             >;
 
             sensor-bindings = <&rotate_kp LS(TAB) TAB>;
