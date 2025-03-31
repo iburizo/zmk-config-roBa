@@ -291,7 +291,7 @@
 
         ARROWandSYMBOL {
             bindings = <
-&kp EXCL  &trans    &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
+&kp EXCL  &kp EXCL  &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
 &trans    &kp HASH  &kp DOLLAR  &kp LBKT       &kp RBKT          &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &kp PERCENT
 &trans    &trans    &kp CARET   &kp LESS_THAN  &kp GREATER_THAN  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSLASH
 &trans    &trans    &trans      &trans         &trans            &trans      &trans  &trans                                        &trans
