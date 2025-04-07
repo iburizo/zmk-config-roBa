@@ -255,10 +255,10 @@
             bindings = <&kp LGUI>, <&kp LS(LGUI)>;
         };
 
-        mm_z2shift: mm_z2shift {
+        mm_a2shift: mm_a2shift {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_Z2SHIFT";
-            bindings = <&kp Z>, <&mt LEFT_SHIFT Z>;
+            label = "MM_A2SHIFT";
+            bindings = <&kp A>, <&mt LEFT_SHIFT A>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
@@ -272,8 +272,8 @@
         default_layer {
             bindings = <
 &mt Q TAB    &kp W       &kp E    &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &td_nyoro
-&kp A        &kp S       &lt 4 D  &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
-&mm_z2shift  &kp X       &kp C    &kp V            &kp B                 &mo 6                   &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&mm_a2shift  &kp S       &lt 4 D  &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&kp Z        &kp X       &kp C    &kp V            &kp B                 &mo 6                   &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
 &kp COMMA    &kp PERIOD  &td_win  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                             &sl 5
             >;
 
