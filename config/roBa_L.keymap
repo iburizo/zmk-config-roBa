@@ -271,13 +271,13 @@
 
         default_layer {
             bindings = <
-&mt Q TAB    &kp W       &kp E    &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &td_nyoro
-&mm_a2shift  &kp S       &lt 4 D  &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
-&kp Z        &kp X       &kp C    &kp V            &kp B                 &mo 6                   &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp COMMA    &kp PERIOD  &td_win  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                             &sl 5
+&mt Q TAB    &kp W       &kp E          &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &kp MINUS
+&mm_a2shift  &kp S       &lt 4 D        &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
+&kp Z        &kp X       &kp C          &kp V            &kp B                 &mo 6                   &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp COMMA    &kp PERIOD  &kp LS(LCTRL)  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                             &sl 5
             >;
 
-            sensor-bindings = <&rotate_pgupdown>;
+            sensor-bindings = <&rotate_scroll SCRL_UP SCRL_DOWN>;
         };
 
         NUM {
@@ -291,7 +291,7 @@
 
         ARROWandSYMBOL {
             bindings = <
-&kp EXCL           &kp EXCL  &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &trans
+&kp EXCL           &kp EXCL  &trans      &kp LPAR       &kp RPAR                              &trans         &trans    &trans    &trans     &kp TILDE
 &mt LEFT_SHIFT AT  &kp HASH  &kp DOLLAR  &kp LBKT       &kp RBKT          &trans      &trans  &kp LC(LA(C))  &kp BSPC  &kp UP    &kp DEL    &kp PERCENT
 &trans             &trans    &kp CARET   &kp LESS_THAN  &kp GREATER_THAN  &trans      &trans  &kp AMPS       &kp LEFT  &kp DOWN  &kp RIGHT  &kp BACKSLASH
 &trans             &trans    &trans      &trans         &trans            &trans      &trans  &trans                                        &trans
