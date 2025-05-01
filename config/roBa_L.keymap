@@ -264,6 +264,96 @@
             mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
             keep-mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
         };
+
+        mm_m2left_sub: mm_m2left_sub {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_M2LEFT_SUB";
+            bindings = <&kp M>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        mm_m2left: mm_m2left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_M2LEFT";
+            bindings = <&kp M>, <&mm_m2left_sub>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        mm_mb1todown_sub: mm_mb1todown_sub {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MB1TODOWN_SUB";
+            bindings = <&mkp MB1>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        mm_mb1todown: mm_mb1todown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MB1TODOWN";
+            bindings = <&mkp MB1>, <&mm_mb1todown_sub>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        mm_mb2toright_sub: mm_mb2toright_sub {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MB2TORIGHT_SUB";
+            bindings = <&mkp MB2>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        mm_mb2toright: mm_mb2toright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_MB2TORIGHT";
+            bindings = <&mkp MB2>, <&mm_mb2toright_sub>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        mm_k2up_sub: mm_k2up_sub {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_K2UP_SUB";
+            bindings = <&kp K>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        mm_k2up: mm_k2up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_K2UP";
+            bindings = <&kp K>, <&mm_k2up_sub>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        ht_k_layer: ht_k_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_K_LAYER";
+            bindings = <&mo>, <&mm_k2up>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -271,10 +361,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB    &kp W       &kp E          &kp R            &kp T                                                           &kp Y        &kp U  &kp I     &kp O     &kp MINUS
-&mm_a2shift  &kp S       &lt 4 D        &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J  &lt 3 K   &kp L     &kp P
-&kp Z        &kp X       &kp C          &kp V            &kp B                 &mo 6                   &td_win           &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp COMMA    &kp PERIOD  &kp LS(LCTRL)  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                             &sl 5
+&mt Q TAB    &kp W       &kp E          &kp R            &kp T                                                           &kp Y        &kp U       &kp I            &kp O           &kp MINUS
+&mm_a2shift  &kp S       &lt 4 D        &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J       &ht_k_layer 3 0  &kp L           &kp P
+&kp Z        &kp X       &kp C          &kp V            &kp B                 &mo 6                   &td_win           &kp N        &mm_m2left  &mm_mb1todown    &mm_mb2toright  &kp SLASH
+&kp COMMA    &kp PERIOD  &kp LS(LCTRL)  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                                               &sl 5
             >;
 
             sensor-bindings = <&rotate_scroll SCRL_UP SCRL_DOWN>;
