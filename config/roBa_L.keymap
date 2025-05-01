@@ -10,7 +10,7 @@
 // スクロール速度を設定
 // #define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 1000
 
 &mt {
     flavor = "balanced";
