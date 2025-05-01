@@ -367,7 +367,7 @@
 &kp COMMA    &kp PERIOD  &kp LS(LCTRL)  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                                               &sl 5
             >;
 
-            sensor-bindings = <&rotate_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rotate_scroll SCRL_DOWN SCRL_UP>;
         };
 
         NUM {
