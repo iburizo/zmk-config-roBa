@@ -361,7 +361,7 @@
 
         default_layer {
             bindings = <
-&mt Q TAB    &kp W       &kp E          &kp R            &kp T                                                           &kp Y        &kp U       &kp I            &kp O           &kp MINUS
+&mt Q LC(Z)  &kp W       &kp E          &kp R            &kp T                                                           &kp Y        &kp U       &kp I            &kp O           &kp MINUS
 &mm_a2shift  &kp S       &lt 4 D        &lt 1 F          &kp G                 &kp LG(S)               &kp GREATER_THAN  &kp H        &kp J       &ht_k_layer 3 0  &kp L           &kp P
 &kp Z        &kp X       &kp C          &kp V            &kp B                 &mo 6                   &td_win           &kp N        &mm_m2left  &mm_mb1todown    &mm_mb2toright  &kp SLASH
 &kp COMMA    &kp PERIOD  &kp LS(LCTRL)  &mt LCTRL LANG2  &mt LEFT_SHIFT SPACE  &mt LEFT_ALT LANG1      &kp LEFT_COMMAND  &lt 2 ENTER                                               &sl 5
@@ -395,7 +395,7 @@
 &trans  &kp F7  &kp F8  &kp F9  &kp F10                      &trans     &trans           &trans  &trans             &trans
 &trans  &kp F4  &kp F5  &kp F6  &trans   &trans      &trans  &trans     &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans
 &trans  &kp F1  &kp F2  &kp F3  &trans   &trans      &trans  &trans     &trans           &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans   &trans      &kp F3  &kp LC(W)                                              &trans
+&trans  &trans  &trans  &trans  &trans   &trans      &kp F4  &kp LC(W)                                              &trans
             >;
 
             sensor-bindings = <&rotate_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
