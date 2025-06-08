@@ -136,6 +136,13 @@
             bindings = <&kp T &kp A &kp N &kp A &kp B &kp O &kp T &kp A &kp N1 &kp N2>;
             label = "TANA12";
         };
+
+        ku: ku {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp U>;
+            label = "KU";
+        };
     };
 
     behaviors {
