@@ -22,7 +22,7 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <1 2>;
         };
 
@@ -84,6 +84,11 @@
         ctrl-shift {
             bindings = <&kp LS(LCTRL)>;
             key-positions = <41 37>;
+        };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <23 24>;
         };
     };
 
