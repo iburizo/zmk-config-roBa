@@ -3,8 +3,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
       # JIS-US変換でこれにしないといけなかった
-      - name: kot149
-      url-base: https://github.com/kot149
+    - name: kot149
+    url-base: https://github.com/kot149
   # マウスカーソル加速度変更用に使っていた
    # - name: kumamuk-git
    #   url-base: https://github.com/kumamuk-git
