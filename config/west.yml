@@ -2,8 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
+      # JIS-US変換でこれにしないといけなかった
+      - name: kot149
+      url-base: https://github.com/kot149
+  # マウスカーソル加速度変更用に使っていた
+   # - name: kumamuk-git
+   #   url-base: https://github.com/kumamuk-git
 #マウスカーソル加速度変更のため、マウス用ドライバを別の人のものに変更
 #    - name: sayu-hub
 #      url-base: https://github.com/sayu-hub
@@ -12,6 +16,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+      # JIS-US変換用にパッチ追加
+      patch:
+        - modules/zmk-layout-shift/patches/zmk
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
       revision: main
