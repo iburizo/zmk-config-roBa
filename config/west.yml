@@ -6,8 +6,8 @@ manifest:
     - name: kot149
       url-base: https://github.com/kot149
   # マウスカーソル加速度変更用に使っていた
-   # - name: kumamuk-git
-   #   url-base: https://github.com/kumamuk-git
+    - name: kumamuk-git
+      url-base: https://github.com/kumamuk-git
 #マウスカーソル加速度変更のため、マウス用ドライバを別の人のものに変更
 #    - name: sayu-hub
 #      url-base: https://github.com/sayu-hub
