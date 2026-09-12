@@ -1,17 +1,18 @@
-
-
 #include <layout_shift.dtsi>
 #include <layout_shift_kp_override.dtsi>
+
+// jis-us変換用
+
+#include <layout_shift.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// jis-us変換用
-#include <layout_shift.dtsi>
 / {
     behaviors {
         // Keep the original key_press behavior for ZMK core components
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
@@ -19,6 +20,7 @@
         };
 
         // Override the existing &kp behavior to use our custom implementation
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
@@ -113,6 +115,16 @@
         mb4 {
             bindings = <&mkp MB4>;
             key-positions = <23 24>;
+        };
+
+        lang2 {
+            bindings = <&kp LANG2>;
+            key-positions = <13 12>;
+        };
+
+        lang1 {
+            bindings = <&kp LANG1>;
+            key-positions = <18 19>;
         };
     };
 
